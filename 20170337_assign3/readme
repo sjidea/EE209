@@ -1,0 +1,14 @@
+20170337 SoJung Son
+
+I got tutoring of EE209. 
+My tutor explained about realloc, strdup, and briefly about hash table.
+ 
+For customer_manager1.c, I firstly secured an array of size 1024 which can register 1024 UserInfo. However in customer_manager2.c, I calloced every time when I registered an Userinfo and freed when I unregistered an Userinfo. 
+
+I spent one day understanding the assignment, and about four days to make the code and another four days debugging my code. 
+
+I am willing to use my three free late days. 
+
+Thank you. 
+
+
