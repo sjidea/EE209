@@ -1,0 +1,25 @@
+readme
+
+1. 20170285 박지현, 20170337 손소정 worked together.
+
+ 
+
+2.
+
+20170285 박지현 :validity_test.c(lexical,syntactical),fork.c, ish.c, ish.h
+
+20170337 손소정 :pipe.c, cmdproc.c, ish.c, ish.h
+
+Debugging together.
+
+ 
+
+3. Received a lot of help from our TAs - SeongSoo Lee and Sangwook Bae.
+
+ 
+
+4. About 1 week
+
+ 
+
+5. We did not implement redirection.
