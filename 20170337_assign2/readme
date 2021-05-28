@@ -1,0 +1,12 @@
+name : Sojung Son
+student ID : 20170337
+
+I got help from my tutor about what hidden cases might exist. 
+
+It is impossible to know the end of the allocated memory of destination just with pointers since pointers only tell about the address. 
+
+I used pointers to solve part 1 for extra credit. I tried to get used to the method about address and memory. 
+
+I think I used about 50 hours implementing my codes. 
+
+ 
