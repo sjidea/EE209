@@ -1,0 +1,210 @@
+Sojung Son 20170337 assignment 1 dfa
+
+
+-------------------------
+
+
+variables:
+word, line, char
+i, j
+juseokline
+
+
+--------------------------
+first character
+--------------------------
+
+none:
+	/ :
+	  i=Juseok
+	    word+1, character+1
+
+	i=0 :
+    	  word-1
+
+	\n :
+ 	  linee
+ 	  line+1, character+1
+
+	end-of-file :
+ 	   line=0, word=0, character=0
+
+	space :
+    	  spacee
+    	  character+1
+
+	other :
+    	  word+1, character+1
+
+------------------------------
+from the next character until EOF
+------------------------------
+
+none (the start state)
+
+     / :
+       i=1 :
+       	   character+1
+       	   i=Juseok
+       other :
+       	   none
+
+     * :
+       i=1 :
+       	   character+1
+	   none
+       other :
+       	   i=Juseokend
+
+     \n :
+     	line+1, character+1
+	i=1:
+	  linee
+	other:
+	  linej
+
+     space :
+     	i=1 :
+	   character+1
+	   spacee
+	other :
+	   spacej
+
+     other :
+     	i=1 :
+	  character+1
+	  none
+	other :
+	  none
+
+-------------------------------------
+Juseok
+     * :
+       character-1
+       remember line (as juseokline)
+       none
+
+     / :
+       character+1
+       Juseok
+
+     end-of-file :
+       none
+
+     \n :
+     	line+1, character+1
+	linee
+
+     space :
+     	character+1
+	spacee
+
+     other :
+        character+1
+
+
+Juseokend
+     / :
+       character+1
+       spacee
+
+     end-of-file :
+       none
+
+     * :
+       Juseokend
+
+     \n :
+     	line+1, character+1
+	linej
+
+     space :
+       spacej
+
+     other :
+       none
+
+
+linee
+     / :
+       word+1, character+1
+       i=Juseok
+  	 i=0 :
+  	    word-1
+  	 other :
+	    none
+
+     end-of-file :
+       none
+
+     \n :
+       line+1, character+1
+       linee
+
+     space :
+       character+1
+       spacee
+
+     other :
+       character+1, word+1
+
+
+spacee
+     / :
+       word+1, character+1
+       i=Juseok
+         i=0 :
+	     word-1
+	 other :
+	     none
+
+     end-of-file :
+       none
+
+     \n :
+     	line+1, character+1
+	linee
+
+     space :
+       character+1
+       spacee
+
+     other :
+       character+1, word+1
+       none
+
+
+spacej
+     * :
+	  i=Juseokend
+
+     end-of-file :
+       none
+
+     \n :
+       line+1, characte+1
+       linej
+
+     space :
+       spacej
+
+     other :
+       none
+
+
+linej
+     * :
+       i=Juseokend
+
+     end-of-file :
+       none
+
+     \n :
+       line+1, character+1
+       linej
+
+     space :
+       spacej
+
+     other :
+       none
